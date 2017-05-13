@@ -1,0 +1,29 @@
+{
+  "name": "redux-router-location",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Realytics/redux-router-location.git",
+  "author": "Etienne Dldc <etienne.dldc@outlook.fr>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "NODE_ENV=production npm run clean && NODE_ENV=production webpack lib/index.js",
+    "test": ""
+  },
+  "dependencies": {
+    "history": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/history": "^4.5.1",
+    "cross-env": "^5.0.0",
+    "jest": "^20.0.1",
+    "lodash": "^4.17.4",
+    "redux": "^3.6.0",
+    "rimraf": "^2.5.4",
+    "ts-loader": "^2.0.0",
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.3.0",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1"
+  }
+}
