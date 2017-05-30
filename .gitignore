@@ -38,3 +38,5 @@ jspm_packages
 
 # Lib
 /lib
+
+stats.json

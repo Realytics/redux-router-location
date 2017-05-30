@@ -1,27 +1,58 @@
 {
   "name": "redux-router-location",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:Realytics/redux-router-location.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Realytics/redux-router-location.git"
+  },
   "author": "Etienne Dldc <etienne.dldc@outlook.fr>",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib",
     "build": "NODE_ENV=production npm run clean && NODE_ENV=production webpack lib/index.js",
-    "test": ""
+    "build-stats": "NODE_ENV=production npm run clean && NODE_ENV=production webpack lib/index.js --json > stats.json",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "test:watch": "yarn test -- --watch",
+    "test:cov": "yarn test -- --coverage"
   },
   "dependencies": {
     "history": "^4.6.1"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.3",
     "@types/history": "^4.5.1",
     "cross-env": "^5.0.0",
+    "jest": "^20.0.4",
     "redux": "^3.6.0",
     "rimraf": "^2.5.4",
+    "ts-jest": "^20.0.5",
     "ts-loader": "^2.0.0",
     "tslint": "^5.2.0",
     "tslint-loader": "^3.3.0",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1"
+  },
+  "description": "Put history.location in redux and keep it in sync.",
+  "bugs": {
+    "url": "https://github.com/Realytics/redux-router-location/issues"
+  },
+  "homepage": "https://github.com/Realytics/redux-router-location#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*\\.spec.(ts|tsx|js))$",
+    "mapCoverage": true
   }
 }

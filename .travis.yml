@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+cache: yarn
+deploy:
+  provider: npm
+  email: opensource@realytics.io
+  api_key:
+    secure: leuCyiS0IUCmaOTS91XodlVerAY3kGCW6zL1ed2QtORNl9fTWVJVbPrK2fCPEsh7kHr7A07g+6m42uUONsjTuhau2/k9LcqWunlMZM55is3VDq/9PUsL2SMK+Awbm07gv1hLWK5T3cvu4I8aOsah44tKr3myQdTSmmwxXOhbWc+8AoPlT2+F2gBa4vAC/Sknf+oiLjPGot9/KdAIHVAhON54XDtdAXV3AHXBX7i8CtNY6Ko4jPCwx7cl5h+R+jbMnHsRlr40LaoWu3wKVf2OLkHkbSe0T33QBF2MCBxvZhvUTEQg+qEwIR8Ah+EuaIJYLUxwuYbJXYW3GBQrLW0znpjB4uAS0nHIAqa34UPM5JdpaTBmRXMwus/61gtHVikSnt12C8cH7plvex3lUYNSEt8w8xkfJ2BKpumcI6qx4JKOIxOmP6NnRSLbi5TVK6/1zrpbFYHPPOuTJcbuCLscDAIf60jUjw1pwH8cu8FJQoh+stjPRITCeJesT/dnY+BnD1YdfqQd5a81fArA3cxGAV2BXqTmUOWXWgzBA5nGBGork5rv1Rtp1aWZ7uxThXurh2rL1u1iLT5K8e6Ri4HqHSY+9obNbufnUm9XcuQceQ/Xmjgr+H7kQUEByuMnw2W+z9en9Q/41yN7pj6Bkrt2GFeQaOxhhTJUpXfNSYocWjg=
+  on:
+    tags: true
+    repo: Realytics/redux-router-location

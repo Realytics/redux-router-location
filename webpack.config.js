@@ -46,7 +46,14 @@ var config = {
     ]
   },
 
-  externals: {}
+  externals: {
+    'history': {
+      root: 'History',
+      commonjs2: 'history',
+      commonjs: 'history',
+      amd: 'history'
+    }
+  }
 };
 
 if ('production' === env) {
