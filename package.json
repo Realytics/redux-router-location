@@ -18,10 +18,10 @@
     "test:cov": "yarn test -- --coverage"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.64",
     "history": "^4.6.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.64",
     "@types/history": "^4.5.1",
     "@types/jest": "^19.2.3",
     "cross-env": "^5.0.0",
