@@ -1,7 +1,8 @@
 {
   "name": "redux-router-location",
   "version": "0.1.4",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Realytics/redux-router-location.git"
