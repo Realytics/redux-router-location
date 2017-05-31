@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions go create an go action 1`] = `
+Object {
+  "payload": 3,
+  "type": "@@ROUTER/GO",
+}
+`;
+
+exports[`actions goBack create an goBack action 1`] = `
+Object {
+  "type": "@@ROUTER/GO_BACK",
+}
+`;
+
+exports[`actions goForward create an goForward action 1`] = `
+Object {
+  "type": "@@ROUTER/GO_FORWARD",
+}
+`;
+
+exports[`actions locationDidChange create an locationDidChange action 1`] = `
+Object {
+  "payload": Object {
+    "hash": "",
+    "key": "0uicnx",
+    "pathname": "/home",
+    "search": "",
+    "state": null,
+  },
+  "type": "@@ROUTER/LOCATION_CHANGED",
+}
+`;
+
+exports[`actions push create an push action 1`] = `
+Object {
+  "payload": Object {
+    "hash": "",
+    "key": undefined,
+    "pathname": "/home",
+    "search": "",
+    "state": undefined,
+  },
+  "type": "@@ROUTER/PUSH",
+}
+`;
+
+exports[`actions push create an push action 2`] = `
+Object {
+  "payload": Object {
+    "hash": "",
+    "key": undefined,
+    "pathname": "/home",
+    "search": "?test",
+  },
+  "type": "@@ROUTER/PUSH",
+}
+`;
+
+exports[`actions replace create an replace action 1`] = `
+Object {
+  "payload": Object {
+    "hash": "",
+    "key": undefined,
+    "pathname": "/home",
+    "search": "",
+    "state": undefined,
+  },
+  "type": "@@ROUTER/REPLACE",
+}
+`;
+
+exports[`actions replace create an replace action 2`] = `
+Object {
+  "payload": Object {
+    "hash": "",
+    "key": undefined,
+    "pathname": "/home",
+    "search": "?test",
+  },
+  "type": "@@ROUTER/REPLACE",
+}
+`;
