@@ -6,6 +6,9 @@ export function createMiddleware(history: History): Middleware {
   return () => {
     return (next: Dispatch<any>) => {
       return (action: any) => {
+        if (!action || !action.type) {
+          return next(action);
+        }
         switch (action.type) {
           case Actions.PUSH:
             history.push(action.payload);
