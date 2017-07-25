@@ -40,3 +40,5 @@ jspm_packages
 /lib
 
 stats.json
+
+.DS_Store
