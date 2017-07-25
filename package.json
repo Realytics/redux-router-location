@@ -16,18 +16,20 @@
     "prepare": "npm run build",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
-    "test:cov": "yarn test -- --coverage"
+    "test:cov": "yarn test -- --coverage",
+    "prettier": "prettier --single-quote --print-width 120 --trailing-comma all --write \"{src,test}/**/*.js\""
   },
   "dependencies": {
     "history": "^4.6.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.64",
     "@types/history": "^4.5.1",
     "@types/jest": "^19.2.3",
+    "@types/lodash": "^4.14.64",
     "cross-env": "^5.0.0",
     "jest": "^20.0.4",
     "lodash": "^4.17.4",
+    "prettier": "^1.5.3",
     "redux": "^3.6.0",
     "rimraf": "^2.5.4",
     "ts-jest": "^20.0.5",
