@@ -20,22 +20,22 @@
     "prettier": "prettier --single-quote --print-width 120 --trailing-comma all --write \"{src,test}/**/*.ts\""
   },
   "dependencies": {
-    "history": "^4.6.1"
+    "history": "^4.6.3"
   },
   "devDependencies": {
-    "@types/history": "^4.5.1",
-    "@types/jest": "^19.2.3",
-    "@types/lodash": "^4.14.64",
-    "cross-env": "^5.0.0",
+    "@types/history": "^4.6.0",
+    "@types/jest": "^20.0.4",
+    "@types/lodash": "^4.14.71",
+    "cross-env": "^5.0.1",
     "jest": "^20.0.4",
     "lodash": "^4.17.4",
     "prettier": "^1.5.3",
-    "redux": "^3.6.0",
+    "redux": "^3.7.2",
     "rimraf": "^2.5.4",
-    "ts-jest": "^20.0.5",
-    "ts-loader": "^2.0.0",
-    "typescript": "^2.3.2",
-    "webpack": "^2.5.1"
+    "ts-jest": "^20.0.7",
+    "ts-loader": "^2.3.1",
+    "typescript": "^2.4.2",
+    "webpack": "^3.3.0"
   },
   "description": "Put history.location in redux and keep it in sync.",
   "bugs": {
