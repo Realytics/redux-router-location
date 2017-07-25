@@ -3,14 +3,8 @@ import { History } from 'history';
 import { locationDidChange } from './actions';
 
 export function createEnhancer(history: History): StoreEnhancer<any> {
-  return (next: StoreEnhancerStoreCreator<any>) => (
-    userReducer: Reducer<any>,
-    initialState: any
-  ) => {
-    const store: Store<any> = next(
-      userReducer,
-      initialState
-    );
+  return (next: StoreEnhancerStoreCreator<any>) => (userReducer: Reducer<any>, initialState: any) => {
+    const store: Store<any> = next(userReducer, initialState);
 
     history.listen(location => {
       store.dispatch(locationDidChange(location));

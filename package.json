@@ -17,7 +17,7 @@
     "test": "jest",
     "test:watch": "yarn test -- --watch",
     "test:cov": "yarn test -- --coverage",
-    "prettier": "prettier --single-quote --print-width 120 --trailing-comma all --write \"{src,test}/**/*.js\""
+    "prettier": "prettier --single-quote --print-width 120 --trailing-comma all --write \"{src,test}/**/*.ts\""
   },
   "dependencies": {
     "history": "^4.6.1"

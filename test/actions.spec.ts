@@ -12,7 +12,6 @@ function createLocation(path: string = ''): Location {
 }
 
 describe('actions', () => {
-
   describe('push', () => {
     it('create an push action', () => {
       expect(push('/home')).toMatchSnapshot();
@@ -50,5 +49,4 @@ describe('actions', () => {
       expect(locationDidChange(createLocation('/home'))).toMatchSnapshot();
     });
   });
-
 });
