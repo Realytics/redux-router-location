@@ -11,9 +11,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib",
-    "build": "NODE_ENV=production npm run clean && NODE_ENV=production webpack lib/index.js",
-    "build-stats": "NODE_ENV=production npm run clean && NODE_ENV=production webpack lib/index.js --json > stats.json",
-    "prepare": "npm run build",
+    "build": "NODE_ENV=production yarn run clean && yarn run prettier && NODE_ENV=production webpack lib/index.js",
+    "build-stats": "NODE_ENV=production yarn run clean && NODE_ENV=production webpack lib/index.js --json > stats.json",
+    "prepare": "yarn run build",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
     "test:cov": "yarn test -- --coverage",
@@ -34,8 +34,6 @@
     "rimraf": "^2.5.4",
     "ts-jest": "^20.0.5",
     "ts-loader": "^2.0.0",
-    "tslint": "^5.2.0",
-    "tslint-loader": "^3.3.0",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1"
   },

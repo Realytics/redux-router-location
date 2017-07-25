@@ -12,18 +12,16 @@ var config = {
 
   output: {
     library: 'ReduxRouterLocation',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
 
   devtool: 'source-map',
 
   resolve: {
-    extensions: ['.js', '.ts', '.tsx']
+    extensions: ['.js', '.ts', '.tsx'],
   },
 
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin()
-  ],
+  plugins: [new webpack.optimize.OccurrenceOrderPlugin()],
 
   module: {
     rules: [
@@ -34,26 +32,20 @@ var config = {
         options: {
           configFileName: './tsconfig.json',
           silent: false,
-          visualStudioErrorFormat: true
-        }
+          visualStudioErrorFormat: true,
+        },
       },
-      {
-        test: /\.tsx?$/,
-        loader: 'tslint-loader',
-        include: path.join(__dirname, 'src'),
-        enforce: 'pre'
-      }
-    ]
+    ],
   },
 
   externals: {
-    'history': {
+    history: {
       root: 'History',
       commonjs2: 'history',
       commonjs: 'history',
-      amd: 'history'
-    }
-  }
+      amd: 'history',
+    },
+  },
 };
 
 if ('production' === env) {
@@ -65,15 +57,15 @@ if ('production' === env) {
         unsafe: true,
         unsafe_comps: true,
         warnings: false,
-        screw_ie8: false
+        screw_ie8: false,
       },
       mangle: {
-        screw_ie8: false
+        screw_ie8: false,
       },
       output: {
-        screw_ie8: false
-      }
-    })
+        screw_ie8: false,
+      },
+    }),
   );
 }
 
