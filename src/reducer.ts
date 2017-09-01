@@ -4,14 +4,10 @@ import { Reducer } from 'redux';
 
 export type RouterState = {
   location: Location | null;
-  previousLocation: Location | null;
 };
 
 export function createReducer(initialLocation: Location): Reducer<RouterState> {
-  return (
-    state: RouterState = { location: initialLocation, previousLocation: null },
-    action: Actions.LocationAction,
-  ): RouterState => {
+  return (state: RouterState = { location: initialLocation }, action: Actions.LocationAction): RouterState => {
     if (action && action.type === Actions.LOCATION_CHANGED) {
       // No-op the initial route action
       const { location }: RouterState = state;
@@ -19,7 +15,7 @@ export function createReducer(initialLocation: Location): Reducer<RouterState> {
         return state;
       }
 
-      return { location: action.payload, previousLocation: location };
+      return { location: action.payload };
     }
     return state;
   };
