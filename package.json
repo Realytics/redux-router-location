@@ -1,6 +1,6 @@
 {
   "name": "redux-router-location",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
@@ -47,7 +47,11 @@
     "test": "test"
   },
   "jest": {
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
