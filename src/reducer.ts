@@ -12,18 +12,11 @@ export type RouterState = {
  */
 
 export function createReducer(initialLocation: Location): Reducer<RouterState> {
-  return (
-    state: RouterState = { location: initialLocation },
-    action: Actions.LocationAction
-  ): RouterState => {
+  return (state: RouterState = { location: initialLocation }, action: Actions.LocationAction): RouterState => {
     if (action && action.type === Actions.LOCATION_CHANGED) {
       // No-op the initial route action
       const { location } = state;
-      if (
-        location &&
-        location.pathname === action.payload.pathname &&
-        location.search === action.payload.search
-      ) {
+      if (location && location.pathname === action.payload.pathname && location.search === action.payload.search) {
         return state;
       }
 

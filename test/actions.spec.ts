@@ -1,11 +1,4 @@
-import {
-  push,
-  replace,
-  go,
-  goBack,
-  goForward,
-  locationDidChange
-} from "../src/actions";
+import { push, replace, go, goBack, goForward, locationDidChange } from "../src/actions";
 import { Location } from "history";
 
 function createLocation(path: string = ""): Location {
@@ -14,7 +7,7 @@ function createLocation(path: string = ""): Location {
     hash: "",
     key: "0uicnx",
     search: "",
-    state: null
+    state: null,
   };
 }
 

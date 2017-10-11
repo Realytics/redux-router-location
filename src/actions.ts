@@ -1,9 +1,4 @@
-import {
-  Location,
-  Path,
-  LocationDescriptorObject,
-  createLocation
-} from "history";
+import { Location, Path, LocationDescriptorObject, createLocation } from "history";
 import { ActionCreator } from "redux";
 
 /**
@@ -28,8 +23,7 @@ export type LocationAction = {
  * Action
  */
 
-export const LOCATION_CHANGED: "@@ROUTER/LOCATION_CHANGED" =
-  "@@ROUTER/LOCATION_CHANGED";
+export const LOCATION_CHANGED: "@@ROUTER/LOCATION_CHANGED" = "@@ROUTER/LOCATION_CHANGED";
 export const PUSH: "@@ROUTER/PUSH" = "@@ROUTER/PUSH";
 export const REPLACE: "@@ROUTER/REPLACE" = "@@ROUTER/REPLACE";
 export const GO: "@@ROUTER/GO" = "@@ROUTER/GO";
@@ -40,34 +34,30 @@ export const GO_FORWARD: "@@ROUTER/GO_FORWARD" = "@@ROUTER/GO_FORWARD";
  * Action creators
  */
 
-export const push = (
-  href: Path | LocationDescriptorObject
-): LocationAction => ({
+export const push = (href: Path | LocationDescriptorObject): LocationAction => ({
   type: PUSH,
-  payload: createLocation(href)
+  payload: createLocation(href),
 });
 
-export const replace = (
-  href: Path | LocationDescriptorObject
-): LocationAction => ({
+export const replace = (href: Path | LocationDescriptorObject): LocationAction => ({
   type: REPLACE,
-  payload: createLocation(href)
+  payload: createLocation(href),
 });
 
 export const go = (index: number): IndexedAction => ({
   type: GO,
-  payload: index
+  payload: index,
 });
 
 export const goBack = (): BareAction => ({
-  type: GO_BACK
+  type: GO_BACK,
 });
 
 export const goForward = (): BareAction => ({
-  type: GO_FORWARD
+  type: GO_FORWARD,
 });
 
 export const locationDidChange = (location: Location): LocationAction => ({
   type: LOCATION_CHANGED,
-  payload: location
+  payload: location,
 });

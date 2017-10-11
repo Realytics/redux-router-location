@@ -15,14 +15,14 @@ describe("reducer", () => {
 
   it("return initiale state if no action", () => {
     expect(reducer(undefined, { type: "NOT_REAL_ACTION" })).toEqual({
-      location: history.location
+      location: history.location,
     });
   });
 
   it("handle null action", () => {
     expect(reducer(undefined, null)).toEqual({ location: history.location });
     expect(reducer({ location: history.location }, null)).toEqual({
-      location: history.location
+      location: history.location,
     });
   });
 });

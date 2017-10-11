@@ -16,5 +16,5 @@ export {
   go,
   goBack,
   goForward,
-  locationDidChange
+  locationDidChange,
 } from "./actions";
