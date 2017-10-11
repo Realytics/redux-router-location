@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
     "sourceRoot": "./src",
+    "rootDir": "src",
     "sourceMap": true,
     "experimentalDecorators": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
+    "strict": true,
     "target": "es5",
     "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
     "declaration": true,
     "declarationDir": "./"
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

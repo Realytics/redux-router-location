@@ -30,7 +30,7 @@ var config = {
         loader: 'ts-loader',
         include: path.join(__dirname, 'src'),
         options: {
-          configFile: './tsconfig.json',
+          configFile: 'tsconfig.json',
           silent: false,
           visualStudioErrorFormat: true,
         },
