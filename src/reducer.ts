@@ -3,7 +3,7 @@ import { Location } from "history";
 import { Reducer } from "redux";
 
 export type RouterState = {
-  location: Location | null;
+  location: Location;
 };
 
 /**
