@@ -1,19 +1,23 @@
-import { History } from 'history';
-import { Dispatch, Middleware } from 'redux';
-import * as Actions from './actions';
+import { History } from "history";
+import { Dispatch, Middleware } from "redux";
+import * as Actions from "./actions";
 
 export function createMiddleware(history: History): Middleware {
   return () => {
     return (next: Dispatch<any>) => {
       return (action: any) => {
+        // Just for safety
         if (!action || !action.type) {
           return next(action);
         }
+        /**
+         * When one of the history action is dispatched we don't call next()
+         * so the dispatched is stopped and we change the location.
+         * The location change will dispatch a `LOCATION_CHANGED` action that will update the state
+         */
         switch (action.type) {
           case Actions.PUSH:
             history.push(action.payload);
-            // No return, no next() here
-            // We stop all history events from progressing further through the dispatch chain...
             break;
           case Actions.REPLACE:
             history.replace(action.payload);
@@ -28,7 +32,7 @@ export function createMiddleware(history: History): Middleware {
             history.goForward();
             break;
           default:
-            // ...but we want to leave all events we don't care about undisturbed
+            // any other action, just lat it pass
             return next(action);
         }
       };

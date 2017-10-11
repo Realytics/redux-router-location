@@ -30,7 +30,7 @@ var config = {
         loader: 'ts-loader',
         include: path.join(__dirname, 'src'),
         options: {
-          configFileName: './tsconfig.json',
+          configFile: './tsconfig.json',
           silent: false,
           visualStudioErrorFormat: true,
         },
@@ -65,7 +65,7 @@ if ('production' === env) {
       output: {
         screw_ie8: false,
       },
-    }),
+    })
   );
 }
 

@@ -1,6 +1,6 @@
-export { createReducer, RouterState } from './reducer';
-export { createMiddleware } from './middleware';
-export { createEnhancer } from './enhancer';
+export { createReducer, RouterState } from "./reducer";
+export { createMiddleware } from "./middleware";
+export { createEnhancer } from "./enhancer";
 export {
   LOCATION_CHANGED,
   PUSH,
@@ -16,5 +16,5 @@ export {
   go,
   goBack,
   goForward,
-  locationDidChange,
-} from './actions';
+  locationDidChange
+} from "./actions";
