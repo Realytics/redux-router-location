@@ -1,10 +1,8 @@
-import * as Actions from "./actions";
-import { Location } from "history";
-import { Reducer } from "redux";
+import * as Actions from './actions';
+import { Location } from 'history';
+import { Reducer } from 'redux';
 
-export type RouterState = {
-  location: Location;
-};
+export type RouterState = Location;
 
 /**
  * Only LOCATION_CHANGED is handled here because other action change
@@ -12,15 +10,14 @@ export type RouterState = {
  */
 
 export function createReducer(initialLocation: Location): Reducer<RouterState> {
-  return (state: RouterState = { location: initialLocation }, action: Actions.LocationAction): RouterState => {
+  return (state: RouterState = initialLocation, action: any): RouterState => {
     if (action && action.type === Actions.LOCATION_CHANGED) {
       // No-op the initial route action
-      const { location } = state;
-      if (location && location.pathname === action.payload.pathname && location.search === action.payload.search) {
+      if (state && state.pathname === action.payload.pathname && state.search === action.payload.search) {
         return state;
       }
 
-      return { location: action.payload };
+      return action.payload;
     }
     return state;
   };
