@@ -1,6 +1,6 @@
-import * as Actions from './actions';
-import { Location } from 'history';
-import { Reducer } from 'redux';
+import * as Actions from "./actions";
+import { Location } from "history";
+import { Reducer } from "redux";
 
 export type RouterState = Location;
 
