@@ -23,19 +23,19 @@
     "history": "^4.7.2"
   },
   "devDependencies": {
-    "@types/history": "^4.6.0",
-    "@types/jest": "^21.1.2",
-    "@types/lodash": "^4.14.77",
-    "cross-env": "^5.0.5",
+    "@types/history": "^4.6.2",
+    "@types/jest": "^21.1.8",
+    "@types/lodash": "^4.14.86",
+    "cross-env": "^5.1.1",
     "jest": "^21.2.1",
     "lodash": "^4.17.4",
-    "prettier": "^1.7.4",
+    "prettier": "^1.8.2",
     "redux": "^3.7.2",
     "rimraf": "^2.6.2",
-    "ts-jest": "^21.1.2",
-    "ts-loader": "^2.3.7",
-    "typescript": "^2.5.3",
-    "webpack": "^3.6.0"
+    "ts-jest": "^21.2.4",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.9.1"
   },
   "description": "Put history.location in redux and keep it in sync.",
   "bugs": {
