@@ -1,11 +1,11 @@
 {
   "name": "redux-router-location",
-  "version": "0.4.3",
+  "version": "0.0.0-development",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Realytics/redux-router-location.git"
+    "url": "https://github.com/Realytics/redux-router-location.git"
   },
   "author": "Etienne Dldc <etienne.dldc@outlook.fr>",
   "license": "MIT",
@@ -17,7 +17,8 @@
     "test": "jest",
     "test:watch": "yarn test -- --watch",
     "test:cov": "yarn test -- --coverage",
-    "prettier": "prettier --write \"{src,test}/**/*.ts\""
+    "prettier": "prettier --write \"{src,test}/**/*.ts\"",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
     "history": "^4.7.2"
@@ -35,7 +36,8 @@
     "ts-jest": "^21.2.4",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
-    "webpack": "^3.9.1"
+    "webpack": "^3.9.1",
+    "semantic-release": "^8.2.0"
   },
   "description": "Put history.location in redux and keep it in sync.",
   "bugs": {
